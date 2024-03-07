@@ -1,41 +1,65 @@
 /* eslint-disable react/no-unescaped-entities */
-import './AboutMe.css'
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import ContactPageIcon from '@mui/icons-material/ContactPage';
-import logo from '../../assets/tobPNG.png'
-import { ListItemButton } from '@mui/material';
+import "./AboutMe.css";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import ContactPageIcon from "@mui/icons-material/ContactPage";
+import EmailIcon from '@mui/icons-material/Email';
+import logo from "../../assets/caraSaludo.webp";
+import { Button } from "@mui/material";
 
 const AboutMe = () => {
-
-
-  return (
-    <section className="container my-5 py-5 w-100">
-        <div className='row'>
-            <div className='col-md-6 d-flex justify-content-center align-items-center'>
-                <img src={logo} className='my-5 py-5'/>
-            </div>
-            <div className='col-md-6 d-flex flex-column gap-3'>
-                <h2 id="about" className="seccion">About Me</h2>
-                <p className='introduction'>I'm a frontend developer driven by a passion for crafting user-friendly interfaces. My focus is on blending design and functionality to create seamless digital experiences. Constantly exploring new technologies, I aim to bring innovation and excellence to every project. Let's build something exceptional together.</p>
-                <div className='d-flex justify-content-end'>
-                    <ListItemButton component="a" href="#home">
-                        <GitHubIcon/>
-                        <p className='text-decoration-none text-dark ps-2 m-0'>Github</p>
-                    </ListItemButton>
-                    <ListItemButton component="a" href="#home">
-                        <LinkedInIcon/>
-                        <p className='text-decoration-none text-dark ps-2 m-0'>LinkedIn</p>
-                    </ListItemButton>
-                    <ListItemButton component="a" href="#home">
-                        <ContactPageIcon/>
-                        <p className='text-decoration-none text-dark ps-2 m-0'>Resume</p>
-                    </ListItemButton>
+    return (
+        <section className="container py-5 w-100">
+            <div className="row">
+                <div className="col-md-6 d-flex justify-content-center align-items-center">
+                    <img src={logo} className="caraAbout mb-5" />
+                </div>
+                <div className="col-md-6 d-flex flex-column gap-3">
+                    <h2 id="about" className="seccion">
+                        About Me
+                    </h2>
+                    <p className="introduction">
+                        I'm a frontend developer driven by a passion for crafting
+                        user-friendly interfaces. My focus is on blending design and
+                        functionality to create seamless digital experiences. Constantly
+                        exploring new technologies, I aim to bring innovation and excellence
+                        to every project. Let's build something exceptional together.
+                    </p>
+                    <div className="d-flex justify-content-start gap-2 flex-wrap">
+                        <Button     
+                            variant="outlined" 
+                            color="inherit"
+                            href="https://github.com/tob-alvarez"
+                            target="_blank"  
+                            rel="noopener noreferrer"
+                        >
+                            <GitHubIcon />
+                            <p className="text-decoration-none text-dark ps-2 m-0">Github</p>
+                        </Button>
+                        <Button 
+                            variant="outlined" 
+                            href="https://www.linkedin.com/in/tobdeveloper"
+                            target="_blank"  
+                            rel="noopener noreferrer"
+                        > 
+                            <LinkedInIcon />
+                            <p className="text-decoration-none text-dark ps-2 m-0">
+                                LinkedIn
+                            </p>
+                        </Button>
+                        <Button variant="outlined" color="error">
+                            <ContactPageIcon />
+                            <p className="text-decoration-none text-dark ps-2 m-0">Resume</p>
+                        </Button>
+                        <Button variant="outlined" color="success" onClick={() =>window.location.href = '#contact'}>
+                            <EmailIcon />
+                            <p className="text-decoration-none text-dark ps-2 m-0">Contact</p>
+                        </Button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-  )
-}
+        </section>
+    );
+};
 
-export default AboutMe
+export default AboutMe;

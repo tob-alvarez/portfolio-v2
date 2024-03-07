@@ -2,3 +2,9 @@
     border-radius: "10px";
     height: 50px;
 }
+.hidden {
+    display: none;
+  }
+.MuiPaper-root{
+    width: 300px;
+}  
