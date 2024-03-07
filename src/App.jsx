@@ -5,6 +5,7 @@ import Projects from "./components/Projects/Projects";
 import Navbar from "./components/Navbar/Navbar";
 import Skills from "./components/Skills/Skills";
 import Contact from "./components/Contact/Contact";
+import Elevador from "./components/Elevador/Elevador";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <Projects/>
       <Skills/>
       <Contact/>
+      <Elevador/>
     </>
   );
 }
