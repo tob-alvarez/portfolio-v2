@@ -47,7 +47,12 @@ const AboutMe = () => {
                                 LinkedIn
                             </p>
                         </Button>
-                        <Button variant="outlined" color="error">
+                        <Button 
+                            variant="outlined" 
+                            color="error"
+                            href="https://drive.google.com/file/d/1jyO4yBT6_PUxBKRDOidd2Otrm4LI1c6L/view?usp=sharing"
+                            target="_blank"  
+                            rel="noopener noreferrer">
                             <ContactPageIcon />
                             <p className="text-decoration-none text-dark ps-2 m-0">Resume</p>
                         </Button>
