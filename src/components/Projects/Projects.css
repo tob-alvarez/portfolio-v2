@@ -10,7 +10,16 @@
     margin-top: 40px;
     width: 350px !important;
 }
+.projectTransparent{
+    margin-top: 40px;
+    width: 350px !important;
+    background-color: rgba(0, 0, 0, .3) !important;
+}
 .project:hover{
+    scale: 1.02;
+    transition: .4s ease-out;
+}
+.projectTransparent:hover{
     scale: 1.02;
     transition: .4s ease-out;
 }
