@@ -33,7 +33,7 @@ const Navbar = () => {
         }}
       >
           <IconButton onClick={handleMenuToggle} sx={{ display: { sm: 'block', md: 'none' } }}>
-            <MenuIcon />
+            <MenuIcon htmlColor={darkMode ? 'black' : 'white'}/>
           </IconButton>
 
         {matches && <img src={logoTob} alt="Logo" className="logo" />}
