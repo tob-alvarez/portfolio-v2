@@ -56,7 +56,7 @@ const AboutMe = () => {
                         <Button 
                             variant="outlined" 
                             color="error"
-                            href="https://drive.google.com/file/d/1jyO4yBT6_PUxBKRDOidd2Otrm4LI1c6L/view?usp=sharing"
+                            href="https://drive.google.com/file/d/1iGq5qqbtBpc7B9EMdYrdzPl3lSoOj5ZX/view?usp=drive_link"
                             target="_blank"  
                             rel="noopener noreferrer">
                             <ContactPageIcon />

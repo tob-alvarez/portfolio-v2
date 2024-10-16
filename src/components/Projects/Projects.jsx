@@ -6,6 +6,7 @@ import AppleIcon from '@mui/icons-material/Apple';
 import comPic from '../../assets/comScreen.png'
 import equipaPic from '../../assets/equipa.png'
 import ciditucPic from '../../assets/cidituc.png'
+import todopic from '../../assets/todopic.png'
 import LockIcon from '@mui/icons-material/Lock';
 import { useContext } from 'react';
 import { TobContext } from '../../context/TobContext';
@@ -22,6 +23,10 @@ const Projects = () => {
 
     const { darkMode } = useContext(TobContext);
     const textColor = darkMode ? "text-dark" : "text-white";
+
+    const irAlGithub = () =>{
+        window.open("https://github.com/tob-alvarez/TodoList-Native", "_blank");
+    }
 
     return (
     <section className='projectsSection py-5 container'>
@@ -47,12 +52,11 @@ const Projects = () => {
                     <LockIcon titleAccess='Sorry this repository is private :(' htmlColor={darkMode ? 'black' : 'white'}/>
                     <img src={react} alt="" style={{width: 22}} />
                     <img src={material} alt="" style={{width: 22}} />
-                    <img src={darkMode? ex2 : ex} alt="" style={{width: 22}} />
                     <img src={mysql} alt="" style={{width: 22}} />
                 </div>
             </Paper>
-            <Paper elevation={8} className={darkMode ? 'project d-flex flex-column justify-content-around p-3' : 'projectTransparent d-flex flex-column justify-content-around p-3'}>
-                <img className='img-fluid rounded-2' src="https://camo.githubusercontent.com/921f8ac5fec1a425c9c7c08d3254555a83325a50081ea25fb040b13fde1e4d83/68747470733a2f2f692e696d6775722e636f6d2f437331514643672e706e67" alt="" />
+            <Paper elevation={8} style={{cursor: 'pointer'}} onClick={irAlGithub} className={darkMode ? 'project d-flex flex-column justify-content-around p-3' : 'projectTransparent d-flex flex-column justify-content-around p-3'}>
+                <img className='img-fluid rounded-2' src={todopic} alt="" />
                 <h3 className={`m-2 titulo-project ${textColor}`}>TobDo</h3>
                 <p className={`description p-2 m-0a ${textColor}`}>TobDo-List is a task management application that provides a comprehensive experience for efficiently organizing your day. Designed with simplicity and functionality in mind.</p>
                 <div className='mx-2 my-4 d-flex gap-2 align-items-center'>

@@ -13,9 +13,11 @@ const Contact = () => {
     const textColor = darkMode ? "text-dark" : "text-white";
 
     const handleEmailClick = () => {
-    const mailtoLink = `mailto:${emailAddress}`;
+        const subject = "Mail from portfolio";
+        const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}`;
         window.location.href = mailtoLink;
     };
+    
 
     return (
         <section className="container py-5 mt-5 w-100">
