@@ -25,7 +25,7 @@ const AboutMe = () => {
                         About Me
                     </h2>
                     <p className={`introduction ${textColor}`}>
-                        I'm a frontend developer driven by a passion for crafting
+                        I'm a fullstack developer driven by a passion for crafting
                         user-friendly interfaces. My focus is on blending design and
                         functionality to create seamless digital experiences. Constantly
                         exploring new technologies, I aim to bring innovation and excellence

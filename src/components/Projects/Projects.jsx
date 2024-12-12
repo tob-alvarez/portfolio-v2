@@ -6,6 +6,7 @@ import AppleIcon from '@mui/icons-material/Apple';
 import comPic from '../../assets/comScreen.png'
 import equipaPic from '../../assets/equipa.png'
 import ciditucPic from '../../assets/cidituc.png'
+import mapaScreenPic from '../../assets/mapaScreen.jpg'
 import todopic from '../../assets/todopic.png'
 import LockIcon from '@mui/icons-material/Lock';
 import { useContext } from 'react';
@@ -28,16 +29,34 @@ const Projects = () => {
         window.open("https://github.com/tob-alvarez/TodoList-Native", "_blank");
     }
 
+    const irACidituc = () =>{
+        window.open("https://ciudaddigital.smt.gob.ar/", "_blank");
+    }
+
+    const irAMapa = () =>{
+        window.open("https://mapa.smt.gob.ar/", "_blank");
+    }
+
     return (
     <section className='projectsSection py-5 container'>
         <h2 className={`seccion ${textColor}`} id='projects'>Projects</h2>
         <div className='d-flex mt-5 w-100 justify-content-around flex-wrap'>
-            <Paper elevation={8} className={darkMode ? 'project d-flex flex-column justify-content-around p-3' : 'projectTransparent d-flex flex-column justify-content-around p-3'}>
+            <Paper elevation={8} style={{cursor: 'pointer'}} onClick={irAMapa} className={darkMode ? 'project d-flex flex-column justify-content-around p-3' : 'projectTransparent d-flex flex-column justify-content-around p-3'}>
+                <img className='img-fluid rounded-2' src={mapaScreenPic} alt="" />
+                <h3 className={`m-2 titulo-project ${textColor}`}>Mapa SMT</h3>
+                <p className={`description p-2 m-0a ${textColor}`}>SMT Map is an application designed to display the municipality's map with its various points of interest, zones, and areas. It also includes an admin panel for adding new points.</p>
+                <div className='mx-2 my-4 d-flex gap-2'>
+                    <img src={react} alt="" style={{width: 22}} />
+                    <img src={material} alt="" style={{width: 22}} />
+                    <img src={darkMode? ex2 : ex} alt="" style={{width: 22}} />
+                    <img src={mysql} alt="" style={{width: 22}} />
+                </div>
+            </Paper>
+            <Paper elevation={8} style={{cursor: 'pointer'}} onClick={irACidituc} className={darkMode ? 'project d-flex flex-column justify-content-around p-3' : 'projectTransparent d-flex flex-column justify-content-around p-3'}>
                 <img className='img-fluid rounded-2' src={ciditucPic} alt="" />
                 <h3 className={`m-2 titulo-project ${textColor}`}>CidiTuc</h3>
                 <p className={`description p-2 m-0a ${textColor}`}>CidiTuc is a huge application that was developed for the municipality of San Miguel de Tucuman, it has functions for the public use of citizens and also for the company's employees and its officials.</p>
                 <div className='mx-2 my-4 d-flex gap-2'>
-                    <LockIcon titleAccess='Sorry this repository is private :(' htmlColor={darkMode ? 'black' : 'white'}/>
                     <img src={react} alt="" style={{width: 22}} />
                     <img src={material} alt="" style={{width: 22}} />
                     <img src={darkMode? ex2 : ex} alt="" style={{width: 22}} />
@@ -80,7 +99,7 @@ const Projects = () => {
             </Paper>
         </div>
     </section>
-  )
+    )
 }
 
 export default Projects
