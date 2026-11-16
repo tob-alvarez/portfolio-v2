@@ -1,0 +1,107 @@
+export default {
+  meta: {
+    title: 'Tobias Alvarez, Full Stack Developer',
+    description:
+      'Full stack developer from San Miguel de Tucumán, Argentina. I build software people use every day: maps, portals, online procedures and the design systems that tie them together.',
+  },
+  skip: 'Skip to content',
+  nav: {
+    label: 'Sections',
+    work: 'Work',
+    experience: 'Experience',
+    stack: 'Stack',
+    contact: 'Contact',
+    menu: 'Menu',
+    close: 'Close',
+    language: 'Language',
+  },
+  hero: {
+    available: 'Open to remote roles',
+    role: 'Full stack developer',
+    lead: 'I build software people use every day: maps, portals, online procedures and the design systems that tie them together.',
+    work: 'See my work',
+    cv: 'Download CV',
+  },
+  about: {
+    title: 'About me',
+    text: "I'm a full stack developer from San Miguel de Tucumán, Argentina. Today I work as a developer and IT consultant at KPMG Argentina. Before that I was at the City of San Miguel de Tucumán's Technology Innovation Office, where I took whole systems from design to production with React, Node.js, Express and MySQL. I care that what I build gets used every day and makes sense the first time.",
+    photoAlt: 'Portrait of Tobias Alvarez',
+    facts: [{ value: 4, suffix: '+', label: 'years of experience' }],
+  },
+  experience: {
+    title: 'Experience',
+    current: 'Current role',
+    education: 'Education',
+    certifications: 'Certifications',
+    languages: 'Languages',
+  },
+  work: {
+    title: 'Featured work',
+    intro: 'Four projects for the City of San Miguel de Tucumán where I had a central role.',
+    role: 'Role',
+    open: 'Read case',
+    visit: 'Visit site',
+    cursor: 'View',
+  },
+  system: {
+    title: 'Ciudad Digital design system',
+    intro: 'One visual language for every application the city runs. I designed it, documented it and applied it to seven of them.',
+    beats: [
+      {
+        title: 'Tokens',
+        text: 'Colours, type, radii and shadows as CSS variables and as a Material UI theme. No colour is ever hard-coded.',
+      },
+      {
+        title: 'Components',
+        text: 'Glass header, side menu, alerts and skeletons ready to copy, with day and night modes and no flash on load.',
+      },
+      {
+        title: 'Rollout',
+        text: 'A six-phase migration guide with a review checklist, prompts and a Claude Code skill to repeat the process in each app.',
+      },
+    ],
+    demo: {
+      brandTop: 'Ciudad',
+      brandBottom: 'SMT',
+      toggleDay: 'Switch to day mode',
+      toggleNight: 'Switch to night mode',
+      primary: 'Save changes',
+      secondary: 'Cancel',
+      danger: 'Delete',
+      alert: 'Your changes were saved.',
+      cardTitle: 'Complaints this month',
+      cardText: 'Resolved on time',
+      typeSample: 'Poppins, 300 to 700',
+      copied: 'Copied',
+      copyHint: 'Copy',
+    },
+    apps: ['Derivador', 'CiDiTuc landing', 'Atención Ciudadana', 'Movilidad Urbana', 'Mapa Interactivo', 'Licitaciones', 'smt.gob.ar portal'],
+    appsLabel: 'Migrated applications',
+  },
+  more: {
+    title: 'More systems',
+    intro: 'Other systems I worked on. They are for internal use, so there are no screenshots.',
+  },
+  stack: {
+    title: 'Stack',
+  },
+  contact: {
+    title: "Let's talk",
+    text: "I'm open to remote roles and to projects where the software has real users.",
+    copy: 'Copy email',
+    copied: 'Email copied',
+    cv: 'Download CV',
+  },
+  footer: {
+    local: 'Time in Tucumán',
+    top: 'Back to top',
+  },
+  case: {
+    close: 'Close case',
+    context: 'The starting point',
+    did: 'What I did',
+    how: 'How it is built',
+    stack: 'Technologies',
+    visit: 'Visit site',
+  },
+}

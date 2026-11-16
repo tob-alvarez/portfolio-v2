@@ -1,0 +1,46 @@
+:root {
+  /* Color: noche tucumana. Los azules y el amarillo vienen del logo de la ciudad. */
+  --bg-0: #060914;
+  --bg-1: #0b1020;
+  --bg-2: #131a2e;
+  --line: rgb(238 242 248 / 0.09);
+  --line-strong: rgb(238 242 248 / 0.2);
+  --text-0: #eef2f8;
+  --text-1: #a6b1c6;
+  --text-2: #76839b;
+  --blue-600: #0066ff;
+  --blue-500: #2e8bff;
+  --blue-300: #2eb1ff;
+  --sun: #f4dc00;
+  --accent: var(--blue-500);
+
+  /* Tipografía: una sola familia; el eje de ancho hace el trabajo de una display. */
+  --font: 'Archivo Variable', 'Archivo', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  /* "ALVAREZ" mide ~5.94em al ancho máximo: 14.4vw entra en el contenedor a cualquier tamaño. */
+  --fs-name: clamp(2.75rem, 14.4vw, 15rem);
+  --fs-display: clamp(2.75rem, 9vw, 9rem);
+  --fs-h2: clamp(2.125rem, 5vw, 4.5rem);
+  --fs-h3: clamp(1.75rem, 3.4vw, 3.25rem);
+  --fs-lead: clamp(1.375rem, 2.5vw, 2.375rem);
+  --fs-body-l: clamp(1.0625rem, 1.25vw, 1.25rem);
+  --fs-body: 1.0625rem;
+  --fs-small: 0.9375rem;
+  --fs-meta: 0.875rem;
+
+  /* Espacio y forma */
+  --gutter: clamp(20px, 5vw, 80px);
+  --max: 1440px;
+  --section-pad: clamp(96px, 13vw, 208px);
+  --header-h: 72px;
+  --r-1: 6px;
+  --r-2: 12px;
+  --r-3: 20px;
+  --r-4: 32px;
+
+  /* Movimiento (espejado en src/lib/gsap.js) */
+  --dur-1: 0.2s;
+  --dur-2: 0.45s;
+  --dur-3: 0.9s;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-inout: cubic-bezier(0.65, 0, 0.35, 1);
+}

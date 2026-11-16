@@ -1,0 +1,31 @@
+.footer {
+  border-top: 1px solid var(--line);
+  font-size: var(--fs-meta);
+  color: var(--text-2);
+}
+
+.inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 32px;
+  padding-block: 28px;
+}
+
+.time {
+  font-variant-numeric: tabular-nums;
+}
+
+.top {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  color: var(--text-1);
+  transition: color var(--dur-1);
+}
+
+.top:hover {
+  color: var(--text-0);
+}

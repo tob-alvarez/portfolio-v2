@@ -1,0 +1,380 @@
+.section {
+  position: relative;
+  background: var(--bg-1);
+  border-block: 1px solid var(--line);
+}
+
+.stage {
+  display: flex;
+  align-items: center;
+  padding-block: clamp(80px, 10vw, 128px);
+}
+
+.grid {
+  display: grid;
+  gap: clamp(40px, 6vw, 96px);
+  align-items: center;
+}
+
+.intro {
+  margin-top: 20px;
+}
+
+.beats {
+  display: grid;
+  gap: 4px;
+  margin-top: clamp(28px, 3.4vw, 48px);
+}
+
+.beat {
+  padding-block: 18px;
+  border-top: 1px solid var(--line);
+  max-width: 54ch;
+}
+
+.beatTitle {
+  margin-bottom: 4px;
+  font-size: clamp(1.25rem, 1.8vw, 1.5rem);
+  font-stretch: 110%;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+}
+
+/* ---------- Demo: acá rigen los tokens de Ciudad Digital, no los del portfolio ---------- */
+
+.demo {
+  --cd-bg: #f4f6fb;
+  --cd-surface: #ffffff;
+  --cd-text: #0f172a;
+  --cd-muted: #475569;
+  --cd-border: rgb(15 23 42 / 0.1);
+  --cd-primary: #1f89f6;
+  --cd-primary-hover: #0b63c9;
+  --cd-soft: #e8f2fe;
+  --cd-success: #16a34a;
+  --cd-success-soft: #dcfce7;
+  --cd-danger: #dc2626;
+  --cd-header: rgb(255 255 255 / 0.72);
+
+  overflow: clip;
+  border-radius: 20px;
+  border: 1px solid var(--line-strong);
+  background: var(--cd-bg);
+  color: var(--cd-text);
+  font-family: 'Poppins', var(--font);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  box-shadow: 0 40px 80px -40px rgb(0 102 255 / 0.45);
+  transition:
+    background-color 0.5s,
+    color 0.5s;
+}
+
+.demo[data-tema='oscuro'] {
+  --cd-bg: #0b1220;
+  --cd-surface: #111a2b;
+  --cd-text: #e5e7eb;
+  --cd-muted: #94a3b8;
+  --cd-border: rgb(255 255 255 / 0.1);
+  --cd-soft: rgb(31 137 246 / 0.18);
+  --cd-success-soft: rgb(22 163 74 / 0.18);
+  --cd-header: rgb(11 18 32 / 0.72);
+}
+
+.demoHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  padding-inline: 20px;
+  background: var(--cd-header);
+  border-bottom: 1px solid var(--cd-border);
+  transition: background-color 0.5s;
+}
+
+.brand {
+  display: grid;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.brand span {
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cd-primary);
+}
+
+.themeToggle {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--cd-text);
+  transition: background-color 0.2s;
+}
+
+.themeToggle:hover {
+  background: var(--cd-soft);
+}
+
+.layers {
+  display: grid;
+  gap: 28px;
+  padding: clamp(18px, 2.6vw, 32px);
+}
+
+.layer {
+  display: grid;
+  gap: 18px;
+  align-content: start;
+}
+
+.swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 150px), 1fr));
+  gap: 10px;
+}
+
+.swatch {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0 12px;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  border-radius: 14px;
+  border: 1px solid var(--cd-border);
+  background: var(--cd-surface);
+  text-align: left;
+  transition:
+    background-color 0.5s,
+    border-color 0.2s;
+}
+
+.swatch:hover {
+  border-color: var(--cd-primary);
+}
+
+.chip {
+  grid-row: span 2;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--cd-border);
+}
+
+.swatchName {
+  font-size: 0.75rem;
+  color: var(--cd-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.swatchHex {
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.typeRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+  padding: 16px 18px;
+  border-radius: 14px;
+  border: 1px solid var(--cd-border);
+  background: var(--cd-surface);
+  transition: background-color 0.5s;
+}
+
+.typeSample {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.typeLabel {
+  flex: 1;
+  min-width: 12ch;
+  font-size: 0.875rem;
+  color: var(--cd-muted);
+}
+
+.radii {
+  display: flex;
+  gap: 8px;
+}
+
+.radii li {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 2px solid var(--cd-primary);
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--cd-muted);
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cdButton {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0 20px;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.cdPrimary {
+  background: var(--cd-primary);
+  color: #fff;
+}
+
+.cdSecondary {
+  background: var(--cd-soft);
+  color: var(--cd-primary);
+}
+
+.cdDanger {
+  background: var(--cd-danger);
+  color: #fff;
+}
+
+.alert {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 14px;
+  background: var(--cd-success-soft);
+  color: var(--cd-success);
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: background-color 0.5s;
+}
+
+.card {
+  display: grid;
+  gap: 4px;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid var(--cd-border);
+  background: var(--cd-surface);
+  transition: background-color 0.5s;
+}
+
+.cardTitle {
+  font-size: 0.875rem;
+  color: var(--cd-muted);
+}
+
+.cardValue {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.cardText {
+  font-size: 0.875rem;
+  color: var(--cd-muted);
+}
+
+.meter {
+  height: 8px;
+  margin-top: 10px;
+  border-radius: 999px;
+  background: linear-gradient(to right, var(--cd-primary) 87%, var(--cd-soft) 87%);
+}
+
+.skeleton {
+  width: 55%;
+  height: 12px;
+  margin-top: 12px;
+  border-radius: 999px;
+  background: var(--cd-soft);
+}
+
+.appsLabel {
+  font-size: 0.875rem;
+  color: var(--cd-muted);
+}
+
+.apps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.app {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px 10px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--cd-border);
+  background: var(--cd-surface);
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: background-color 0.5s;
+}
+
+.app svg {
+  color: var(--cd-success);
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+  }
+}
+
+/* Con la sección fija, las tres capas ocupan el mismo lugar y se relevan. */
+@media (min-width: 1024px) and (min-height: 700px) and (prefers-reduced-motion: no-preference) {
+  .stage {
+    min-height: 100svh;
+    padding-block: calc(var(--header-h) + 12px) 24px;
+  }
+
+  /* Todo tiene que entrar en una pantalla de 768 px de alto. */
+  .copy :global(.h-section) {
+    font-size: clamp(2rem, 3.5vw, 3.5rem);
+  }
+
+  .intro {
+    margin-top: 14px;
+  }
+
+  .beats {
+    margin-top: 20px;
+  }
+
+  .beat {
+    padding-block: 13px;
+  }
+
+  .layers {
+    min-height: 380px;
+  }
+
+  .layer {
+    grid-area: 1 / 1;
+  }
+}
