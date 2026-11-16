@@ -1,0 +1,133 @@
+.header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 50;
+  background: rgb(6 9 20 / 0.62);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  border-bottom: 1px solid var(--line);
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 24px;
+  height: var(--header-h);
+}
+
+.brand {
+  font-size: 0.9375rem;
+  white-space: nowrap;
+  font-weight: 800;
+  font-stretch: 122%;
+  letter-spacing: -0.01em;
+  color: var(--text-0);
+}
+
+.nav {
+  display: none;
+}
+
+.links {
+  display: flex;
+  gap: clamp(20px, 2.6vw, 40px);
+}
+
+.link {
+  position: relative;
+  padding-block: 8px;
+  font-size: var(--fs-small);
+  font-weight: 500;
+  color: var(--text-1);
+  transition: color var(--dur-1);
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  inset: auto 0 2px;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--dur-2) var(--ease-out);
+}
+
+.link:hover {
+  color: var(--text-0);
+}
+
+.link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.tools {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.toggle {
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--text-0);
+}
+
+.progress {
+  position: absolute;
+  inset: auto 0 -1px;
+  height: 1px;
+  background: var(--blue-300);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+/* El header tiene backdrop-filter, así que es el bloque contenedor de este panel. */
+.menu {
+  position: absolute;
+  inset: 100% 0 auto;
+  height: calc(100dvh - var(--header-h));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 32px var(--gutter) 40px;
+  background: var(--bg-0);
+  overflow-y: auto;
+}
+
+.menu[hidden] {
+  display: none;
+}
+
+.menuLinks {
+  display: grid;
+  gap: 4px;
+}
+
+.menuLink {
+  display: block;
+  padding-block: 10px;
+  font-size: clamp(2.5rem, 12vw, 4rem);
+  font-weight: 700;
+  font-stretch: 118%;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--text-0);
+}
+
+@media (min-width: 860px) {
+  .nav {
+    display: block;
+  }
+
+  .toggle,
+  .menu {
+    display: none;
+  }
+}

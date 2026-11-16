@@ -1,0 +1,56 @@
+.marquee {
+  overflow: clip;
+  padding-block: clamp(20px, 3vw, 40px);
+  border-block: 1px solid var(--line);
+}
+
+.track {
+  display: flex;
+  width: max-content;
+}
+
+.list {
+  display: flex;
+  flex: none;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  font-size: clamp(1.75rem, 4.2vw, 4rem);
+  font-weight: 700;
+  font-stretch: 122%;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: var(--text-0);
+  white-space: nowrap;
+}
+
+/* Separador: el sol del logo de la ciudad. */
+.item::after {
+  content: '';
+  width: 0.24em;
+  height: 0.24em;
+  margin-inline: 0.7em;
+  border-radius: 50%;
+  background: var(--sun);
+}
+
+.item:nth-child(even) {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-2);
+}
+
+:global(html.no-motion) .list[aria-hidden='true'] {
+  display: none;
+}
+
+:global(html.no-motion) .track {
+  width: auto;
+}
+
+:global(html.no-motion) .list {
+  flex-wrap: wrap;
+  gap: 12px 0;
+  padding-inline: var(--gutter);
+}

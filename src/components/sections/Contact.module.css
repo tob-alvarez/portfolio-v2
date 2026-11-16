@@ -1,0 +1,76 @@
+.contact {
+  overflow: clip;
+  isolation: isolate;
+}
+
+/* Amanecer: el único lugar donde el amarillo del sol toma protagonismo. */
+.sun {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  z-index: -1;
+  width: 150vw;
+  aspect-ratio: 5 / 2;
+  translate: -50% 62%;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgb(244 220 0 / 0.5), rgb(46 139 255 / 0.3) 42%, transparent 78%);
+  pointer-events: none;
+}
+
+.title {
+  margin-left: -0.03em;
+  font-size: var(--fs-display);
+  font-weight: 800;
+  font-stretch: 125%;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+}
+
+.text {
+  margin-top: clamp(16px, 2vw, 28px);
+  color: var(--text-0);
+}
+
+.row {
+  margin-top: clamp(32px, 4vw, 56px);
+}
+
+.email {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 24px;
+  padding: clamp(16px, 2vw, 24px) clamp(20px, 2.6vw, 36px);
+  border-radius: var(--r-3);
+  background: var(--text-0);
+  color: var(--bg-0);
+  font-size: clamp(1.125rem, 2.8vw, 2.25rem);
+  font-weight: 700;
+  font-stretch: 108%;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  text-align: left;
+  overflow-wrap: anywhere;
+  transition: background-color var(--dur-1);
+}
+
+.email:hover {
+  background: var(--sun);
+}
+
+.copyState {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--fs-small);
+  font-weight: 600;
+  font-stretch: 100%;
+  letter-spacing: 0;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}

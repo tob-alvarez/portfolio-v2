@@ -1,0 +1,142 @@
+.hero {
+  position: relative;
+  display: flex;
+  min-height: 100svh;
+  overflow: clip;
+  isolation: isolate;
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+/* Sin WebGL o sin movimiento: el horizonte de la ciudad, quieto. */
+.fallback {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(60% 4% at 50% 36%, rgb(46 139 255 / 0.55), transparent 70%),
+    radial-gradient(90% 34% at 50% 36%, rgb(0 102 255 / 0.3), transparent 70%), var(--bg-0);
+}
+
+.canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.2s;
+}
+
+.canvas[data-ready='true'] {
+  opacity: 1;
+}
+
+/* Oscurece la base para que el texto siempre tenga contraste. */
+.backdrop::after {
+  content: '';
+  position: absolute;
+  inset: 45% 0 0;
+  background: linear-gradient(to bottom, transparent, rgb(6 9 20 / 0.82) 55%, var(--bg-0));
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: clamp(16px, 2.2vw, 32px);
+  padding-top: calc(var(--header-h) + 32px);
+  padding-bottom: clamp(28px, 4vw, 56px);
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px 32px;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px 8px 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: rgb(6 9 20 / 0.5);
+  font-size: var(--fs-small);
+  font-weight: 500;
+  color: var(--text-0);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--sun);
+  box-shadow: 0 0 0 4px rgb(244 220 0 / 0.18);
+}
+
+.where {
+  font-size: var(--fs-small);
+  font-stretch: 92%;
+  line-height: 1.4;
+  color: var(--text-1);
+  text-align: right;
+}
+
+.name {
+  --wdth: 125;
+  display: grid;
+  margin-left: -0.035em;
+  font-size: var(--fs-name);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 0.82;
+  color: var(--text-0);
+}
+
+.line {
+  display: block;
+  overflow: clip;
+  /* margen para que el recorte no coma el borde de las letras */
+  padding-block: 0.04em;
+  white-space: nowrap;
+  font-variation-settings: 'wdth' var(--wdth);
+}
+
+.char {
+  display: inline-block;
+  will-change: transform;
+}
+
+.foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px 48px;
+  padding-top: clamp(8px, 1.4vw, 20px);
+}
+
+.lead {
+  max-width: 34ch;
+  font-size: clamp(1.125rem, 1.7vw, 1.5rem);
+  line-height: 1.4;
+  color: var(--text-0);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+@media (max-width: 599px) {
+  .where {
+    text-align: left;
+  }
+}

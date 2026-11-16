@@ -1,0 +1,107 @@
+export default {
+  meta: {
+    title: 'Tobias Alvarez, desarrollador full stack',
+    description:
+      'Desarrollador full stack de San Miguel de Tucumán. Construyo software que la gente usa todos los días: mapas, portales, trámites y los sistemas de diseño que los unen.',
+  },
+  skip: 'Saltar al contenido',
+  nav: {
+    label: 'Secciones',
+    work: 'Trabajo',
+    experience: 'Experiencia',
+    stack: 'Stack',
+    contact: 'Contacto',
+    menu: 'Menú',
+    close: 'Cerrar',
+    language: 'Idioma',
+  },
+  hero: {
+    available: 'Disponible para roles remotos',
+    role: 'Desarrollador full stack',
+    lead: 'Construyo software que la gente usa todos los días: mapas, portales, trámites y los sistemas de diseño que los unen.',
+    work: 'Ver trabajo',
+    cv: 'Descargar CV',
+  },
+  about: {
+    title: 'Sobre mí',
+    text: 'Soy desarrollador full stack de San Miguel de Tucumán. Hoy trabajo como desarrollador y consultor IT en KPMG Argentina. Antes pasé por la Dirección de Innovación Tecnológica de la Municipalidad de San Miguel de Tucumán, donde llevé sistemas completos del diseño a producción con React, Node.js, Express y MySQL. Me importa que lo que construyo se use todos los días y se entienda a la primera.',
+    photoAlt: 'Retrato de Tobias Alvarez',
+    facts: [{ value: 4, suffix: '+', label: 'años de experiencia' }],
+  },
+  experience: {
+    title: 'Experiencia',
+    current: 'Puesto actual',
+    education: 'Educación',
+    certifications: 'Certificaciones',
+    languages: 'Idiomas',
+  },
+  work: {
+    title: 'Trabajo destacado',
+    intro: 'Cuatro proyectos de la Municipalidad de San Miguel de Tucumán en los que tuve un rol central.',
+    role: 'Rol',
+    open: 'Ver caso',
+    visit: 'Visitar sitio',
+    cursor: 'Ver',
+  },
+  system: {
+    title: 'Sistema de diseño Ciudad Digital',
+    intro: 'Un mismo lenguaje visual para todas las aplicaciones del municipio. Lo diseñé, lo documenté y lo apliqué en siete de ellas.',
+    beats: [
+      {
+        title: 'Tokens',
+        text: 'Colores, tipografía, radios y sombras como variables CSS y como tema de Material UI. Ningún color se escribe a mano.',
+      },
+      {
+        title: 'Componentes',
+        text: 'Header de vidrio, menú lateral, alertas y skeletons listos para copiar, con modo día y noche sin parpadeo al cargar.',
+      },
+      {
+        title: 'Despliegue',
+        text: 'Una guía de migración en seis fases, con checklist de revisión, prompts y una skill de Claude Code para repetir el proceso en cada app.',
+      },
+    ],
+    demo: {
+      brandTop: 'Ciudad',
+      brandBottom: 'SMT',
+      toggleDay: 'Cambiar a modo día',
+      toggleNight: 'Cambiar a modo noche',
+      primary: 'Guardar cambios',
+      secondary: 'Cancelar',
+      danger: 'Eliminar',
+      alert: 'Los cambios se guardaron.',
+      cardTitle: 'Reclamos del mes',
+      cardText: 'Resueltos dentro del plazo',
+      typeSample: 'Poppins, de 300 a 700',
+      copied: 'Copiado',
+      copyHint: 'Copiar',
+    },
+    apps: ['Derivador', 'Landing CiDiTuc', 'Atención Ciudadana', 'Movilidad Urbana', 'Mapa Interactivo', 'Licitaciones', 'Portal smt.gob.ar'],
+    appsLabel: 'Aplicaciones migradas',
+  },
+  more: {
+    title: 'Más sistemas',
+    intro: 'Otros sistemas en los que trabajé. Son de uso interno, así que van sin capturas.',
+  },
+  stack: {
+    title: 'Stack',
+  },
+  contact: {
+    title: 'Hablemos',
+    text: 'Estoy abierto a roles remotos y a proyectos donde el software tenga usuarios reales.',
+    copy: 'Copiar email',
+    copied: 'Email copiado',
+    cv: 'Descargar CV',
+  },
+  footer: {
+    local: 'Hora en Tucumán',
+    top: 'Volver arriba',
+  },
+  case: {
+    close: 'Cerrar caso',
+    context: 'El punto de partida',
+    did: 'Lo que hice',
+    how: 'Cómo está hecho',
+    stack: 'Tecnologías',
+    visit: 'Visitar sitio',
+  },
+}

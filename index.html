@@ -2,13 +2,85 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./src/assets/logoTob.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tob Developer</title>
+    <title>Tobias Alvarez, Full Stack Developer</title>
+    <meta
+      name="description"
+      content="Full stack developer from San Miguel de Tucumán, Argentina. I build software people use every day: maps, portals, online procedures and the design systems that tie them together."
+    />
+    <meta name="theme-color" content="#060914" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href="https://tobdeveloper.vercel.app/" />
+    <link rel="alternate" hreflang="es" href="https://tobdeveloper.vercel.app/?lang=es" />
+    <link rel="alternate" hreflang="en" href="https://tobdeveloper.vercel.app/?lang=en" />
+    <link rel="alternate" hreflang="x-default" href="https://tobdeveloper.vercel.app/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tobdeveloper.vercel.app/" />
+    <meta property="og:title" content="Tobias Alvarez, Full Stack Developer" />
+    <meta
+      property="og:description"
+      content="I build software people use every day: maps, portals, online procedures and the design systems that tie them together."
+    />
+    <meta property="og:image" content="https://tobdeveloper.vercel.app/og.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="es_AR" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Tobias Alvarez",
+        "jobTitle": "Full Stack Software Developer",
+        "url": "https://tobdeveloper.vercel.app/",
+        "address": { "@type": "PostalAddress", "addressLocality": "San Miguel de Tucumán", "addressCountry": "AR" },
+        "sameAs": ["https://github.com/tob-alvarez", "https://www.linkedin.com/in/tobdeveloper/"]
+      }
+    </script>
+
+    <!-- Idioma y movimiento antes del primer paint: evita el flash de idioma y del preloader. -->
+    <script>
+      ;(function () {
+        var root = document.documentElement
+        var lang
+        try {
+          var param = new URLSearchParams(location.search).get('lang')
+          lang = param || localStorage.getItem('lang')
+        } catch (e) {}
+        if (lang !== 'es' && lang !== 'en') {
+          var prefs = navigator.languages || [navigator.language || 'en']
+          lang = prefs.some(function (l) { return /^es/i.test(l) }) ? 'es' : 'en'
+        }
+        root.lang = lang
+        var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches
+        var seen = false
+        try { seen = sessionStorage.getItem('intro') === '1' } catch (e) {}
+        root.classList.add(reduce ? 'no-motion' : 'motion')
+        if (!reduce && !seen) root.classList.add('intro')
+      })()
+    </script>
+    <style>
+      html { background: #060914; }
+      #preloader { display: none; }
+      html.intro #preloader {
+        position: fixed; inset: 0; z-index: 100; display: flex; align-items: flex-end; justify-content: space-between;
+        padding: clamp(20px, 5vw, 80px); background: #060914; color: #eef2f8;
+        font: 600 clamp(1rem, 1.4vw, 1.25rem) / 1 'Archivo Variable', system-ui, sans-serif;
+        /* Si el JS nunca llega, el telón se levanta solo. */
+        animation: preloader-out 0.6s 6s forwards;
+      }
+      #preloader-count { font-size: clamp(4rem, 14vw, 12rem); font-weight: 800; font-stretch: 125%; letter-spacing: -0.04em; font-variant-numeric: tabular-nums; line-height: 0.8; }
+      @keyframes preloader-out { to { opacity: 0; visibility: hidden; } }
+    </style>
   </head>
   <body>
+    <div id="preloader" aria-hidden="true">
+      <span>Tobias Alvarez</span>
+      <span id="preloader-count">0</span>
+    </div>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    <script src="https://kit.fontawesome.com/339330c5fb.js" crossorigin="anonymous"></script>
   </body>
 </html>

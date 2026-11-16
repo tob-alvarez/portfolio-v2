@@ -1,0 +1,57 @@
+.ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 95;
+  display: grid;
+  place-items: center;
+  width: 84px;
+  height: 84px;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* El tamaño se anima con scale sobre un pseudo-elemento: nada de width/height. */
+.ring::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgb(238 242 248 / 0.55);
+  border-radius: 50%;
+  scale: 0.2;
+  transition:
+    scale var(--dur-2) var(--ease-out),
+    background-color var(--dur-2),
+    border-color var(--dur-2);
+}
+
+.ring[data-state='active']::before {
+  scale: 0.55;
+  border-color: var(--blue-300);
+}
+
+.ring[data-state='label']::before {
+  scale: 1;
+  border-color: transparent;
+  background: var(--text-0);
+}
+
+.label {
+  position: relative;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  font-stretch: 105%;
+  color: var(--bg-0);
+  opacity: 0;
+  transition: opacity var(--dur-1);
+}
+
+.ring[data-state='label'] .label {
+  opacity: 1;
+}
+
+@media not ((hover: hover) and (pointer: fine)) {
+  .ring {
+    display: none;
+  }
+}
