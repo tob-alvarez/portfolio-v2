@@ -5,8 +5,8 @@ export const site = {
   email: 'tobdeveloper@gmail.com',
   github: 'https://github.com/tob-alvarez',
   linkedin: 'https://www.linkedin.com/in/tobdeveloper/',
-  // Reemplazar por el PDF actualizado cuando esté listo.
-  cv: 'https://drive.google.com/file/d/1iGq5qqbtBpc7B9EMdYrdzPl3lSoOj5ZX/view?usp=drive_link',
+  // Generados con `npm run cv` (scripts/build-cv.mjs).
+  cv: { es: '/cv/Tobias-Alvarez-CV-ES.pdf', en: '/cv/Tobias-Alvarez-CV-EN.pdf' },
 }
 
 export const marquee = ['React', 'Node.js', 'Express', 'MySQL', 'Next.js', 'MapLibre GL', 'three.js', 'TypeScript', 'Leaflet', 'React Native']

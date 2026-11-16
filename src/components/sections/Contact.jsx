@@ -8,7 +8,7 @@ import Icon from '../ui/Icon.jsx'
 import s from './Contact.module.css'
 
 export default function Contact() {
-  const { t } = useLanguage()
+  const { t, tr } = useLanguage()
   const root = useRef(null)
   const email = useRef(null)
   const [copied, setCopied] = useState(false)
@@ -86,7 +86,7 @@ export default function Contact() {
             </Button>
           </li>
           <li>
-            <Button href={site.cv} variant="ghost" icon="download" external>
+            <Button href={tr(site.cv)} variant="ghost" icon="download" external>
               {t('contact.cv')}
             </Button>
           </li>

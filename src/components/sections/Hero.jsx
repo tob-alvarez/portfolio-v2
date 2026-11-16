@@ -21,7 +21,7 @@ function Chars({ text }) {
 }
 
 export default function Hero() {
-  const { t } = useLanguage()
+  const { t, tr } = useLanguage()
   const root = useRef(null)
   const [shader] = useState(canRunShader)
 
@@ -116,7 +116,7 @@ export default function Hero() {
           </p>
           <div className={s.actions} data-fade>
             <Button href="#work">{t('hero.work')}</Button>
-            <Button href={site.cv} variant="ghost" icon="download" external>
+            <Button href={tr(site.cv)} variant="ghost" icon="download" external>
               {t('hero.cv')}
             </Button>
           </div>

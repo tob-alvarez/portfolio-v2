@@ -12,6 +12,7 @@ npm run dev       # servidor de desarrollo
 npm run build     # build de producción en dist/
 npm run lint
 npm run images    # regenera src/assets a partir de assets-src/
+npm run cv        # regenera los PDF del CV en public/cv/ (necesita Chrome o Edge)
 ```
 
 Requiere Node 22.12 o superior.
@@ -20,7 +21,8 @@ Requiere Node 22.12 o superior.
 
 | Qué | Archivo |
 |---|---|
-| Links, email, CV | `src/data/site.js` |
+| Links y email | `src/data/site.js` |
+| Contenido del CV (ES y EN) | `scripts/build-cv.mjs`, después `npm run cv` |
 | Experiencia, educación, certificaciones | `src/data/experience.js` |
 | Casos destacados y lista de "Más sistemas" | `src/data/projects.js` |
 | Tecnologías | `src/data/skills.js` |
